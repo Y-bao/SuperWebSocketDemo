@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+    <script src="http://localhost:24703/Scripts/jquery-1.9.1.min.js"></script>
+	<meta charset="UTF-8">
+    <title>Web sockets test</title>
+    <script type="text/javascript">
+        var ws;
+        $(document).ready(function () {
+                var name = prompt("Please enter your name", "")
+                if (name != null && name != "") {
+                    ws = new WebSocket("ws://192.168.11.234:2012/" + name);//连接服务器	
+                    ws.onopen = function (event) {
+                        $("#connectState").append("<div>已经与服务器建立了连接\r\n当前连接状态：" + this.readyState + "</div><br/>");
+                    };
+                    ws.onmessage = function (event) {
+                        $("#TalkLog").append("<div>\r\n" + event.data + "</div><br/>");
+                    };
+                    ws.onclose = function (event) {
+                        $("#connectState").append("<div>已经与服务器断开连接\r\n当前连接状态：" + this.readyState + "</div><br/>");
+                    };
+                    ws.onerror = function (event) {
+                        $("#connectState").append("<div>WebSocket异常！</div><br/>");
+                    };
+                }
+            
+            
+    });
+
+        function SendData() {
+            if ($.trim($("#txtSend").val()).length > 0) {
+                try {
+                    ws.send($.trim($("#txtSend").val()));
+                    $("#txtSend").val("");
+                } catch (ex) {
+                    alert(ex.message);
+                }
+            }
+        };
+
+		function seestate(){
+			alert(ws.readyState);
+		}
+       
+    </script>
+    
+</head>
+<body>
+    <input type="text" id="txtSend" />
+    <div id="TalkLog">
+    </div>
+    <div id="connectState">
+        
+    </div>
+    <button id='ToggleConnection' type="button" onclick='SendData();'>发送</button><br /><br />
+    <button id='ToggleConnection' type="button" onclick='seestate();'>查看状态</button><br /><br />
+</body>
+</html>
