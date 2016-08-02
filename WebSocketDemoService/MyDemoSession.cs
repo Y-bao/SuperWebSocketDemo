@@ -8,11 +8,11 @@ namespace WebSocketDemoService
 {
     public class MyDemoSession : WebSocketSession<MyDemoSession>
     {
-        private string _MyName = "";
+        private string _Tmark = "";
         private string _MyGroupName = "";
-        public string MyName {
-            get { return _MyName; }
-            set { _MyName = value; }
+        public string Tmark {
+            get { return _Tmark; }
+            set { _Tmark = value; }
         }
         public string MyGroupName {
             get { return _MyGroupName; }

@@ -28,10 +28,10 @@ namespace WebSocketDemoService
             {
                 //有新的连接
                 Console.WriteLine("有新的连接"+session.Origin+"路径："+session.Path);
-                session.MyName = session.Path;
+                session.Tmark = session.Path;
                 foreach (MyDemoSession item in wsServer.GetAllSessions())
                 {
-                    item.Send(session.MyName + "上线");
+                    item.Send(session.Tmark + "上线");
                 }
             };
             wsServer.SessionClosed += (session, reason) =>
@@ -40,7 +40,7 @@ namespace WebSocketDemoService
                 Console.WriteLine("断开连接" + session.Origin + "路径：" + session.Path);
                 foreach (MyDemoSession item in wsServer.GetAllSessions())
                 {
-                    item.Send(session.MyName + "下线");
+                    item.Send(session.Tmark + "下线");
                 }
             };
             wsServer.NewMessageReceived += (session, message) =>
@@ -49,7 +49,7 @@ namespace WebSocketDemoService
                 Console.WriteLine("收到文本" + session.Origin + "路径：" + session.Path+"信息："+message);
                 foreach (MyDemoSession item in wsServer.GetAllSessions())
                 {
-                    item.Send(session.MyName + "说:" + message);
+                    item.Send(session.Tmark + "说:" + message);
                 }
                 
             };
