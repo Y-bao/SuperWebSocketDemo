@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/public.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../kingeditor/themes/default/default.css" />
+		<script charset="utf-8" src="../kingeditor/kindeditor-min.js"></script>
+		<script charset="utf-8" src="../kingeditor/lang/zh_CN.js"></script>
+		<script>
+			KindEditor.ready(function(K) {
+				K.create('textarea[name="content"]', {
+					autoHeightMode : true,
+					afterCreate : function() {
+						this.loadPlugin('autoheight');
+					}
+				});
+			});
+		</script>
+        
+        <script>
+		  window.onload=function(){
+			  var oshow=document.getElementById('show');
+			  var oshowl=document.getElementById('showl');
+			  var oshowr=document.getElementById('showr');
+			  var ooo2_link=document.getElementById('oo2_link');
+			  var olink_exp=document.getElementById('link_exp');
+			  var olin_cheak=document.getElementById('lin_cheak');
+			 
+			     oshow.onmousemove=function(){	  
+				  oshow.style.right='0px';
+				  };
+			     oshow.onmouseout=function(){		  
+				  oshow.style.right='-236px';
+				  };
+				  
+			     olin_cheak.onmousemove=function(){
+				     olink_exp.style.display='block';
+				     olin_cheak.style.height='356px';
+					 		  
+				   } 
+				  
+				olin_cheak.onmouseout=function(){
+				       olink_exp.style.display='none'; 
+				     olin_cheak.style.height='19px';
+				   } 
+		
+
+
+			
+		
+			  }
+        </script>
+</head>
+
+<body  style=" background:#f6f7f9; overflow-x:hidden;">
+<form id="form1" name="form1" method="post" action="">
+<div class="show" id="show">
+   <div class="show_left" id="showl"></div>
+   <div class="show_right" id="showr">
+     <div class="show_right_tit">选择联系人</div>
+     <ul>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+       <li class="link01">
+        <a href="#" class="show_link">张晓A</a>
+       </li>
+     </ul>
+   </div>
+   <div class="clear"></div>
+</div>
+<div class="oo2write_tit">
+ <span>发信</span>
+ <div class="clear"></div>
+</div>
+<div class="write_add">
+  <div class="write_add01">
+    <span class="write_span01">发信账户：</span>
+  
+   <select name="select" id="select" class="write_01">
+   <option>yonghuming@zzzy.cn</option>
+           <option>865666</option>
+   </select>
+   <div class="clear"></div>
+    
+  </div>
+  <div class="write_add01">
+    <span class="write_span02">密码：</span>
+     
+     <input type="text" name="textfield" id="textfield" class="write_01"/>
+     <div class="clear"></div>
+    
+  </div>
+  <div class="write_add01">
+    <span class="write_span01">发件人姓名：</span>
+  
+   <input type="text" name="textfield" id="textfield" class="write_01"/>
+   <div class="clear"></div>
+    
+  </div>
+  <div class="write_add01">
+    <span class="write_span02">发件人邮箱：</span>
+     
+     <input type="text" name="textfield" id="textfield" class="write_01"/>
+     <div class="clear"></div>
+    
+  </div>
+  <div class="write_add01">
+    <span class="write_span01">Cookie服务器地址：</span>
+  
+   <input type="text" name="textfield" id="textfield" class="write_01"/>
+   <div class="clear"></div>
+    
+  </div>
+  <div class="write_add01">
+    <span class="write_span02">SMTP服务器：</span>
+     
+     <input type="text" name="textfield" id="textfield" class="write_01"/>
+     <div class="clear"></div>
+    
+  </div>
+</div>
+<div class="write_tit">
+     
+       <input type="radio" name="radio" id="radio" value="radio" />
+       <label for="radio">取COOKIE</label>
+        <input type="radio" name="radio" id="radio" value="radio" />
+       <label for="radio">跨站</label>
+        <input type="radio" name="radio" id="radio" value="radio" />
+       <label for="radio">链接</label>
+        <input type="radio" name="radio" id="radio" value="radio" />
+       <label for="radio">正常邮件</label>
+       
+</div>
+<div class="write">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+      <td width="80" align="right">收件人</td>
+      <td class="write_tab"><label for="textfield2"></label>
+        <input type="text" name="textfield2" id="textfield2" class="write_in1"/>
+        <div class="lin_cheak" id="lin_cheak">
+          <div class="oo2_link" id="oo2_link">选择常用联系人</div>
+          <div id="link_exp">
+           <ul>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+            <li class="link01">
+             <a href="#" class="show_link0">张晓A</a>
+            </li>
+           </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+        </td>
+      </tr>
+    <tr>
+      <td align="right">主题</td>
+      <td><input type="text" name="textfield2" id="textfield2" class="write_in01"/></td>
+      </tr>
+    <tr>
+      <td align="right" valign="middle">加页面链接</td>
+      <td><input type="text" name="textfield2" id="textfield2" class="write_in02"/>
+        <input type="submit" name="button" id="button" value="生成" class="oo2write_botg" /></td>
+      </tr>
+    <tr>
+      <td align="right" valign="top">&nbsp;</td>
+      <td>
+      <div class="write_text">
+      <textarea name="content" style="width:100%;height:200px;"></textarea>
+      <div class="write_bo">
+       <input type="submit" name="button2" id="button2" value="提交" class="oo2writein_botg"/>
+        <input type="reset" name="button3" id="button3" value="重写" class="oo2writein_botg"/>
+      </div>
+      </div>
+      </td>
+      </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+       </td>
+      </tr>
+  </table>
+</div>
+</form>
+</body>
+</html>

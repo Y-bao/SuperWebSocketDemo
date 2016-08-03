@@ -22,6 +22,7 @@ namespace WebSocketMvcUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            WebSocketServer.WebSocketServer.StartServer();
         }
     }
 }

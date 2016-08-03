@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Model;
 using SuperWebSocket;
+using WebSocketMvcUI.BLL;
 
 namespace WebSocketDemoService
 {
@@ -47,10 +49,7 @@ namespace WebSocketDemoService
             {
                 //接收到新的文本消息
                 Console.WriteLine("收到文本" + session.Origin + "路径：" + session.Path+"信息："+message);
-                foreach (MyDemoSession item in wsServer.GetAllSessions())
-                {
-                    item.Send(session.Tmark + "说:" + message);
-                }
+                SaveOrder(message, session.SessionID);
                 
             };
             wsServer.NewDataReceived += (session, bytes) =>
@@ -65,5 +64,28 @@ namespace WebSocketDemoService
 
             wsServer.Stop();
         }
+
+        public static void SaveOrder(string Msg,string SessionID)
+        {
+            string[] msg = Msg.Split('|');
+            if (msg.Length==3&&msg[0]=="01")
+            {
+                BLLBase<zkpt_mm_Order> bll = new BLLBase<zkpt_mm_Order>();
+                bll.Insert(new zkpt_mm_Order()
+                {
+                    IsHandle=0,
+                    StrOrder=msg[2],
+                    StrRandom=SessionID,
+                    Tmark=msg[1]
+                });
+            }
+        }
+
+        public void SendBack(string sessionid, string order)
+        {
+            wsServer.GetAppSessionByID(sessionid).Send(order);
+        }
+
+        
     }
 }

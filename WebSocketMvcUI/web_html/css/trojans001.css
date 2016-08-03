@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	}
+p, h1, h2, h3, h4, h5, h6, form {
+	margin:0px;
+	padding:0px;}
+img {
+	border:none;}
+ul, li {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;}
+a:hover {
+	color:#333;
+	text-decoration:none;}
+a {
+	color:#000000;
+	text-decoration:none;}
+.clear {
+	clear:both;}
+
+
+.tro_left{position:absolute;
+          left:0px;
+		  top:0px;
+		  bottom:0px;
+		  width:163px;
+		  
+		  border-right:1px solid #ccc;
+		  background:#e5e6ea;}
+.tro_right{position:absolute;
+		   left:164px;
+		   top:0px;
+		   bottom:0px;
+		   right:0px;
+		  }
+.tro_tit{height:42px;
+         width:164px;
+		 background-color:#39c0c3;
+		 line-height:42px;
+		 background-image:url(../images/mm.png);
+		 background-position:5px 10px;
+		 background-repeat:no-repeat;
+		 color:#fff;
+		 text-indent:30px;
+		 font-weight:bold;
+		 }
+
+.tro_menu{width:164px;}
+.tro_menu ul{width:164px;
+             display:block;}
+.tro_menu ul li{width:164px;
+             display:block;
+			 height:43px;}
+			 
+			
+.tro_01{height:42px;
+         width:163px;
+		 background-color:#f8f8f8;
+		 line-height:42px;		
+		 color:#666;
+         border-bottom:1px solid #ccc;
+		 display:block;
+		 }
+.tro_01 img{display:block;
+            width:16px;
+			height:16px;
+			float:left;
+			margin-left:10px;
+			margin-top:13px;}
+.tro_01 span{display:block;
+            
+			height:42px;
+			float:left;
+			margin-left:10px;}
+.tro_01:hover{ background-color:#fff;
+              border-bottom:1px solid #eee;
+			  border-right:1px solid #eee;}
+			  
+/*tro001list页面样式*/
+
+.list_tit{height:42px;
+         width:100%;
+		 background-color:#39c0c3;
+		
+		 }
+		
+.tro_sch{height:68px;
+         width:100%;
+		 background-color:#FFF;
+		 border-bottom:1px solid #ccc;
+		  }
+.shc{
+
+	height:68px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+
+	background-color:#fff;
+	 }
+.shc_b{display:inline-block;
+
+color:#666;
+margin-left:15px;
+margin-top:28px;
+}
+
+.shc_inp{display:inline-block;
+
+width:200px;
+margin-left:0px;
+margin-top:25px;}
+.shc_inp0{display:inline-block;
+
+margin-top:25px;
+margin-left:0px;}
+.sch_bot {display:inline-block;
+	margin-left:15px;
+
+	height:30px;
+    background:#39c0c3;
+	background-position:left top;
+	background-repeat:no-repeat;
+	color:#FFF;
+	text-align:center;
+	text-indent:5px;
+	border:none;
+	cursor:pointer;
+	font-weight:bold;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.sch_img{display:inline-block;margin-top:25px;}
+.oo1_list{
+		  background:#e1e2e2;}
+#tab td{height:35px;
+         color:#666;}
+#tab a{color:#09F;
+       background-image:url(../images/pen.png);
+	   background-position:left 2px;
+	   background-repeat:no-repeat;
+	   text-indent:7px;
+	  padding-left:13px;
+	  margin-left:5px;
+	  
+	   }
+.js_bgColor {background-color:#fdfcd1;}
+.page{-moz-border-radius: 4px;      /* Gecko browsers */
+    -webkit-border-radius: 4px;   /* Webkit browsers */
+    border-radius:4px;            /* W3C syntax */
+	height:65px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	line-height:25px;
+	padding-top:20px;
+	background-color:#fff;
+	
+	}
+
+.page ul{display:block;}
+.page ul li{display:inline-block;}
+.page a{display:block;
+        height:25px;
+		border:#ccc 1px solid;
+		float:left;
+		padding-left:5px;
+		padding-right:5px;}
+.page a:hover{color:#508df2;}
+.anniu{background-color:#f6f7f9;}
+.win_1{height:42px;
+      width:100%;
+	 
+	  
+	  background-image:url(../images/pic.png);
+	  background-position:10px 13px;
+	  background-repeat:no-repeat;
+	 
+   
+      color:#39c0c3;
+      font-weight:14px;
+      text-indent:40px;
+	  border-bottom:1px solid #ccc;
+	 }
+.win_1 span{color:#39c0c3;
+          display:block;
+		  width:100%;
+		  height:42px;
+		  line-height:45px;
+		  }

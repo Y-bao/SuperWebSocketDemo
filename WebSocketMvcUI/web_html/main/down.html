@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<script>
+window.onload=function(){
+	var odown=document.getElementById('down');
+	var adiv=odown.getElementsByTagName('div');
+	var ali=odown.getElementsByTagName('li');
+	var ah3=odown.getElementsByTagName('h3');
+	
+	
+	for(var i=0;i<ali.length;i++){
+	ali[i].index=i;
+	ali[i].onclick=function(){
+		if(adiv[this.index].style.display=='none',ah3[this.index].className=='h03'){
+		   adiv[this.index].style.display='block';
+		   ah3[this.index].className='h333';
+			}
+		else{adiv[this.index].style.display='none';ah3[this.index].className='h03';}
+		}
+		}
+	
+		  
+		}
+	
+</script>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+<!--hea部分开始-->
+<div class="hea">
+ <div class="logo"></div>
+ <div class="sheach">
+   <div class="shea">
+     <input  value="搜索" onblur="if(this.value==''){this.value='搜索'}" onfocus="if(this.value=='搜索'){this.value=''}" type="text" class="shea_inp"/>
+     <input type="submit" name="button" id="button" value="" class="shea_bot" />
+     <div class="clear"></div>
+   </div>
+   
+   <div class="clear"></div>
+ </div>
+ <div class="clear"></div>
+</div>
+<!--hea部分结束-->
+
+<!--tit部分开始-->
+<div class="tit">
+   <div class="down">
+    <ul>
+      <li><b>DOWN</b></li>
+      <li><a href="#">Loophole</a></li>
+      <li><a href="#">Loophole</a></li>
+      <div class="clear"></div>
+    </ul>
+   </div>
+   <div class="clear"></div>
+</div>
+<!--tit部分结束-->
+
+<!--flexslider部分开始-->
+<div class="flexslider">
+	<ul class="slides">
+		<li style="background:url(images/img1.jpg) 50% 0 no-repeat;"></li>
+		<li style="background:url(images/img2.jpg) 50% 0 no-repeat;"></li>
+		
+
+	</ul>
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: false
+	});
+});
+</script>
+<!--flexslider部分结束-->
+
+<!--clas部分开始-->
+<div class="clas0">
+  <span>用于基于 x64 的系统的 Windows Vista 安全更新程序 (KB2525694)</span>
+  <div class="down0">
+   <b>选择语言：</b>
+
+   
+   <select name="select" id="select" class="sel" style="line-height:30px;">
+     <option value="c" style="line-height:0px;">中文（简体）</option>
+     <option value="e">英文</option>
+     <option value="c">俄文</option>
+   </select>
+   <input type="submit" name="button2" id="button2" value="下载" class="bot"/>
+  </div>
+  <div class="down01" ><span>现已确认有一个安全问题，未通过身份验证的远程攻击者可能会利用此问题危及您的系统安全并获取对该系统的控制权。 </span></div>
+  <div class="down02" id="down">
+    <ul>
+      <li><h3 class="h03">详情</h3>
+         <div><table width="517" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="261" bgcolor="#eeeeee"><b>版本：</b></td>
+    <td width="256" bgcolor="#eeeeee"><b>出版日期：</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="#eeeeee"><span>2525694</span></td>
+    <td bgcolor="#eeeeee">2011/6/13</td>
+  </tr>
+  <tr>
+    <td bgcolor="#eeeeee"><b>File Name:</b></td>
+    <td bgcolor="#eeeeee"><b>File Size:</b></td>
+  </tr>
+  <tr>
+    <td bgcolor="#eeeeee">Windows6.0-KB2525694-x64.msu</td>
+    <td bgcolor="#eeeeee">1.5 MB</td>
+  </tr>
+</table>
+<br />
+<table width="517" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="261" bgcolor="#eeeeee"><b>知识库文章：<a href="#">KB2525694</a></b></td>
+    
+  </tr>
+  <tr>
+    <td bgcolor="#eeeeee"><b>安全公告：<a href="#">KB2525694</a></b></td>
+    
+  </tr>
+  
+</table>
+<br />
+<p><span>现已确认有一个安全问题，未通过身份验证的远程攻击者可能会利用此问题危及系统的安全并获取对该系统的控制权。您可以通过安装本 Microsoft 更新程序来保护系统不受侵害。安装本更新程序后，可能必须重新启动系统。</span></p>
+</div>
+      </li>
+      <li><h3 class="h03">系统要求</h3>
+         <div>
+           <strong>支持的操作系统</strong>
+           <p>Windows Vista 64-bit Editions Service Pack 1,   Windows Vista Service Pack 2 </p>
+         </div>
+      </li>
+      <li><h3 class="h03">安装说明</h3>
+         <div><p><span>1.若要开始下载，请单击"下载"按钮，然后执行以下操作之一，或者从"更改语言"中选择另一种语言，然后单击"更改"。</span></p>
+<p>•单击"运行"立即开始安装。</p>
+<p>•单击"保存"将下载文件复制到您的计算机上供以后安装。</p>
+</div>
+      </li>
+       <li><h3 class="h03">其他信息</h3>
+         <div><strong>提供其他关键安全更新程序：</strong>若要查找最新的安全更新程序，请访问 <a href="http://update.microsoft.com" jquery17207054407155278763="98">Windows Update</a> 并单击&ldquo;快速安装&rdquo;。若要将最新的安全更新直接传送到您的计算机，请访问<a href="http://go.microsoft.com/fwlink/?LinkId=82023" jquery17207054407155278763="99">家庭安全</a>网站并按指定步骤操作，以确保您受到保护。</div>
+      </li>
+       <li><h3 class="h03">相关资源</h3>
+         <div>安全公告</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--clas部分结束-->
+<div class="foot"></div>
+</form>
+</body>
+</html>

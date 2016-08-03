@@ -1,9 +1,122 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+    <form id="form1" name="form1" method="post" action="">
+        <div class="hui">
+            <div class="line">
+                <a href="#">返回首页</a>
+                <span>></span>
+                <span>计算机远程管理系统</span>
+                <span>></span>
+                <span>Windows版本</span>
+            </div>
 
-<h2>上线列表</h2>
-<script type="text/javascript" >
-   
+            <div class="clear"></div>
+        </div>
+        <div class="win">
+            <span>
+                <b>Windows版本</b>
+                <div class="gess">
+                    <input type="submit" name="button" id="button" value="生成客户端" class="list_bot" />
+                </div>
+            </span>
+            <div class="schear">
 
-</script>
+                <input type="text" name="textfield" id="textfield" class="win_inp" value="请输入搜索木马……" onblur="if(this.value==''){this.value='请输入搜索木马……'}" onfocus="if(this.value=='请输入搜索木马……'){this.value=''}" />
+                <input type="submit" name="button" id="button" value="" class="win_bot" />
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="oo1_list">
+            <table width="100%" border="0" cellspacing="1" cellpadding="0" id="tab">
+                <tr style="background:#919393;">
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">
+                        <input type="checkbox" name="checkbox" id="checkbox" />
+                        <label for="checkbox"></label>
+                    </td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">操作系统</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">公网IP/内网IP：端口</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">机器名</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">摄像头</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">优盘</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">版本</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">上线时间</td>
+                    <td align="center" valign="middle" bgcolor="#aeafaf" style="color:#fff;">修改名称</td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var Ptr = document.getElementById("tab").getElementsByTagName("tr");
+
+        for (var i = 0; i < Ptr.length; i++) {
+            Ptr[i].onmouseover = function () {
+                this.tmpClass = this.className;
+                this.className = "js_bgColor";
+
+            };
+            Ptr[i].onmouseout = function () {
+                this.className = this.tmpClass;
+            };
+        }
+        $(document).ready(function () {
+            $.ajax({
+                url: "../Home/GetOnLineList",
+                type:"Get",
+                success: function (data) {
+                    var datasource=eval(data);
+                    var strhtml="";
+                    for (var i = 0; i < datasource.length; i++) {
+                        strhtml += "<tr bgcolor=\"#f4f6f6\" onclick=\"ShowMenu(this)\">";
+                        strhtml += "<td align=\"center\" valign=\"middle\">";
+                        strhtml += "<input type=\"checkbox\" name=\"checkbox2\" id=\"" + datasource[i].tId + "\" />";
+                        strhtml += "<label for=\"checkbox2\"></label>";
+                        strhtml += "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + datasource[i].tOS + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + datasource[i].tAddress + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + datasource[i].tPCName + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + (datasource[i].tIsCamera==false? '否':'是') + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + (datasource[i].tIsUSB == false ? '否' : '是') + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + datasource[i].tVersion + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\">" + datasource[i].tAddTime + "</td>";
+                        strhtml += "<td align=\"center\" valign=\"middle\"><a href=\"#\">修改</a></td>";
+                        strhtml += "</tr>";
+                    }
+
+                    $("#tab").append(strhtml);
+
+                },
+                error: function () {
+                    alert("加载失败");
+                }
+            });
+
+        });
+
+        function ShowMenu(obj)
+        {
+            var id = $(obj).children("td").first().children().attr("id");
+            $.ajax({
+                url: "../Home/ShowMenu",
+                type: "Get",
+                data: {"id":id},
+                success: function (data) {
+                    if (data === "Down") {
+                        alert("当前木马已下线");
+                    }
+                    else {
+
+                        window.location.href = data;
+                    }
+                },
+                error: function () {
+                    alert("系统忙，请稍后再试");
+                }
+
+            });
+        }
+
+    </script>
+

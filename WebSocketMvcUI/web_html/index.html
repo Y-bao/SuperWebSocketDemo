@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<link href="css/public.css" rel="stylesheet" type="text/css" />
+<script>
+window.onload=function(){
+	var oull=document.getElementById('ull');
+	var ali=oull.getElementsByTagName('li');
+	var ah3=oull.getElementsByTagName('h3');
+	
+	for(var i=0;i<ali.length;i++){
+		ali[i].index=i;
+		
+		ali[i].onmouseover=function(){
+			this.className='h3_fff';
+			this.getElementsByTagName('div')[0].style.display='block';
+			//this.getElementsByTagName('div')[0].style.top='200px';
+			
+			}
+	  ali[i].onmouseout=function(){
+		this.getElementsByTagName('div')[0].style.display='none';
+		this.className='lii';
+		}
+		}
+   
+	}
+</script>
+</head>
+
+<body style=" background-image:url(images/bg.gif); background-position:left top; background-repeat:repeat-y;">
+
+<div class="head">
+  <div class="had02_t">
+          <b>你好,&nbsp;&nbsp;<span>admin</span> &nbsp;&nbsp;欢迎登录&nbsp;&nbsp;|&nbsp;&nbsp;</b><a href="#">退出系统</a>
+      </div>
+</div>
+
+   <div class="hui_menu">
+     导航菜单
+   </div>
+
+<div class="left">
+ <ul id="ull" style="">
+  <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>计算机远程管理系统</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><img src="images/1_0.png" width="19" height="18" /><span>计算机远程管理菜单</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/1_01.png" width="14" height="13" /><span>Windows版本</span><b class="clear"></b></a>
+      <a href="#"><img src="images/1_02.png" width="14" height="13" /><span>Mac版本</span><b class="clear"></b></a>
+      <a href="#"><img src="images/1_03.png" width="14" height="13" /><span>Solaris</span><b class="clear"></b></a>
+      <a href="#"><img src="images/1_04.png" width="14" height="13" /><span>Linux版本</span><b class="clear"></b></a>
+      <a href="#"><img src="images/1_05.png" width="14" height="13" /><span>IOS版本</span><b class="clear"></b></a>
+      <a href="#"><img src="images/1_06.png" width="14" height="13" /><span>Android版本</span><b class="clear"></b></a>
+    </div>
+  </li>
+   <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>网站攻击</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><img src="images/2_0.png" width="19" height="18" /><span>内网渗透系统</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/2_01.png" width="14" height="13" /><span>内网扫描</span><b class="clear"></b></a>
+      <a href="#"><img src="images/2_02.png" width="14" height="13" /><span>内网攻击</span><b class="clear"></b></a>
+      
+      <b><img src="images/22_0.png" width="19" height="18" /><span>网站自动攻击系统</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/22_01.png" width="14" height="13" /><span>网站地址添加</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_02.png" width="14" height="13" /><span>网站自动攻击</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_03.png" width="14" height="13" /><span>SQL注入</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_04.png" width="14" height="13" /><span>网站后台扫描</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_05.png" width="14" height="13" /><span>WebShell地址</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_06.png" width="14" height="13" /><span>网站所有地址</span><b class="clear"></b></a>
+       <a href="#"><img src="images/22_07.png" width="14" height="13" /><span>后台地址信息总揽</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_08.png" width="14" height="13" /><span>表信息总揽</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_09.png" width="14" height="13" /><span>字段信息总揽</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_10.png" width="14" height="13" /><span>批量拿站</span><b class="clear"></b></a>
+      <a href="#"><img src="images/22_11.png" width="14" height="13" /><span>批量拿站结果</span><b class="clear"></b></a>
+    </div>
+  </li>
+     <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>邮件处理</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><img src="images/3_0.png" width="19" height="18" /><span>邮件无痕收取系统</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/3_01.png" width="14" height="13" /><span>无痕取信（HTTP）</span><b class="clear"></b></a>
+      <a href="#"><img src="images/3_02.png" width="14" height="13" /><span>收信（代理设置）</span><b class="clear"></b></a>
+      
+      <b><img src="images/32_0.png" width="19" height="18" /><span>邮件攻击系统</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/32_01.png" width="14" height="13" /><span>发信</span><b class="clear"></b></a>
+      <a href="#"><img src="images/32_02.png" width="14" height="13" /><span>用户配置</span><b class="clear"></b></a>
+      <a href="#"><img src="images/32_03.png" width="14" height="13" /><span>发信回执</span><b class="clear"></b></a>
+      <a href="#"><img src="images/32_04.png" width="14" height="13" /><span>回执信息预览</span><b class="clear"></b></a>
+      <a href="#"><img src="images/32_05.png" width="14" height="13" /><span>发信账号管理</span><b class="clear"></b></a>
+      <a href="#"><img src="images/32_06.png" width="14" height="13" /><span>SMTP管理</span><b class="clear"></b></a>
+      <b><img src="images/33_0.png" width="19" height="18" /><span>邮件综合处理</span><b class="clear"></b></b>
+    </div>
+  </li>
+ <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>数据管理</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><img src="images/4_0.png" width="19" height="18" /><span>账号密码验证系统</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/4_01.png" width="14" height="13" /><span>账号添加</span><b class="clear"></b></a>
+      <a href="#"><img src="images/4_02.png" width="14" height="13" /><span>验证结果</span><b class="clear"></b></a>
+      
+      <b><img src="images/42_0.png" width="19" height="18" /><span>VPN蜜罐后台</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/42_01.png" width="14" height="13" /><span>VPN蜜罐</span><b class="clear"></b></a>
+     
+      <b><img src="images/43_0.png" width="19" height="18" /><span>VPN客户端1</span><b class="clear"></b></b>
+      <b><img src="images/44_0.png" width="19" height="18" /><span>VPN客户端2</span><b class="clear"></b></b>
+      <b><img src="images/45_0.png" width="19" height="18" /><span>VPN客户端3</span><b class="clear"></b></b>
+      <b><img src="images/46_0.png" width="19" height="18" /><span>VPN客户端4</span><b class="clear"></b></b>
+    </div>
+  </li>
+  <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>系统维护</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><img src="images/5_0.png" width="19" height="18" /><span>用户管理</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/5_01.png" width="14" height="13" /><span>用户管理</span><b class="clear"></b></a>
+      <a href="#"><img src="images/5_02.png" width="14" height="13" /><span>用户组管理</span><b class="clear"></b></a>
+      
+      <b><img src="images/52_0.png" width="19" height="18" /><span>操作日志</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/52_01.png" width="14" height="13" /><span>日志管理</span><b class="clear"></b></a>   
+    </div>
+  </li>
+  <li class="lii">
+    <h3 class="left01">
+    <img src="images/001.png" width="30" height="30" />
+    <span>信息获取</span>
+    <b class="clear"></b>
+    </h3>
+    <div id="nav">
+       <b><span>优盘文件抓取</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/6_01.png" width="14" height="13" /><span>优盘文件抓取</span><b class="clear"></b></a>    
+      <b><img src="images/62_0.png" width="19" height="18" /><span>口令抓取</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/62_01.png" width="14" height="13" /><span>口令抓取</span><b class="clear"></b></a>  
+      <b><img src="images/63_0.png" width="19" height="18" /><span>文件抓取</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/63_01.png" width="14" height="13" /><span>文档抓取</span><b class="clear"></b></a>  
+      <b><img src="images/64_0.png" width="19" height="18" /><span>删除文件恢复</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/64_01.png" width="14" height="13" /><span>删除文件恢复</span><b class="clear"></b></a>  
+      <b><img src="images/65_0.png" width="19" height="18" /><span>文件检索</span><b class="clear"></b></b>
+      <a href="main/001list.html" target="right"><img src="images/65_01.png" width="14" height="13" /><span>文件检索</span><b class="clear"></b></a>   
+    </div>
+  </li>
+ 
+ </ul>
+ 
+   <div class="hui_bottom">
+     foot信息
+   </div>
+</div>
+<div class="right">
+ <iframe name="right" id="rightMain" src="" frameborder="no" scrolling="auto"  height="100%" allowtransparency="true" width="100%"/>
+</div>
+</body>
+</html>
